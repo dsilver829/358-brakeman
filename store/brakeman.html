@@ -164,8 +164,8 @@ p {
   </tr>
   <tr>
     <td>/home/dsilver/code/practice/railscasts/358-brakeman/store</td>
-    <td>3.2.6</td>
-    <td>2012-11-17 08:48:54 -0800</td>
+    <td>3.2.8</td>
+    <td>2012-11-17 08:53:50 -0800</td>
     <td>BasicAuth, ContentTag, CrossSiteScripting, DefaultRoutes, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FilterSkipping, ForgerySetting, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttributes, NestedAttributes, QuoteTableName, Redirect, Render, ResponseSplitting, SQL, SafeBufferManipulation, SelectTag, SelectVulnerability, Send, SendFile, SessionSettings, SingleQuotes, SkipBeforeFilter, StripTags, TranslateBug, ValidationRegex, WithoutProtection</td>
   </tr>
 </table>
@@ -194,7 +194,7 @@ p {
   </tr>
   <tr>
     <td>Security Warnings</td>
-    <td>2 <span class='high-confidence'>(1)</span></td>
+    <td>0 <span class='high-confidence'>(0)</span></td>
   </tr>
 </table>
 <br>
@@ -204,92 +204,16 @@ p {
     <th>Total</th>
   </tr>
   
-  <tr>
-    <td>Cross Site Scripting</td>
-    <td>1</td>
-  </tr>
-  
-  <tr>
-    <td>Format Validation</td>
-    <td>1</td>
-  </tr>
-  
 </table>
 <br>
 <h2>Security Warnings</h2>  
 <table>
 
   <tr>
-    <th>Confidence</th>
-    <th>Class</th>
-    <th>Method</th>
-    <th>Warning Type</th>
-    <th>Message</th>
+    <th>General Warnings</th>
   </tr>
-  
   <tr>
-    <td><span class='med-confidence'>Medium</span></td>
-    <td></td>
-    <td></td>
-    <td><a href="https://groups.google.com/d/topic/rubyonrails-security/kKGNeMrnmiY/discussion">Cross Site Scripting</a></td>
-    <td>Rails 3.2.6 does not escape single quotes (CVE-2012-3464). Upgrade to 3.2.8</td>
-  </tr>
-  
-
-</table><p>Model Warnings</p>
-<table>
-  <tr>
-    <th>Confidence</th>
-    <th>Model</th>
-    <th>Warning Type</th>
-    <th>Message</th>
-  </tr>
-
-  <tr>
-    <td><span class='high-confidence'>High</span></td>
-    <td>User</td>
-    <td><a href="http://brakemanscanner.org/docs/warning_types/format_validation/">Format Validation</a></td>
-    <td><div class='warning_message' onClick="toggle('context1');toggle('message1');toggle('full_message1')" >Insufficient validation for 'name' using /^\w+$/. Use \A and \z as anchors near line 4<table id='context1' class='context' style='display:none'><caption>app/models/user.rb</caption>        <tr class='context first'>
-          <td class='context_line'>
-            <pre class='context'>1</pre>
-          </td>
-          <td class='context'>
-            <pre class='context'>class User &lt; ActiveRecord::Base</pre>
-          </td>
-        </tr>
-          <tr class='context alt'>
-            <td class='context_line'>
-              <pre class='context'>2</pre>
-            </td>
-            <td class='context'>
-              <pre class='context'>  has_secure_password</pre>
-            </td>
-          </tr>
-          <tr class='context near_error'>
-            <td class='context_line'>
-              <pre class='context'>3</pre>
-            </td>
-            <td class='context'>
-              <pre class='context'>  attr_accessible :name, :password, :password_confirmation</pre>
-            </td>
-          </tr>
-          <tr class='context alt error'>
-            <td class='context_line'>
-              <pre class='context'>4</pre>
-            </td>
-            <td class='context'>
-              <pre class='context'>  validates_format_of :name, with: /^\w+$/</pre>
-            </td>
-          </tr>
-          <tr class='context near_error'>
-            <td class='context_line'>
-              <pre class='context'>5</pre>
-            </td>
-            <td class='context'>
-              <pre class='context'>end</pre>
-            </td>
-          </tr>
-</table></div></td>
+    <td>[NONE]</td>
   </tr>
 
 </table></body></html>
